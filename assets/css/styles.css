@@ -1,0 +1,792 @@
+.container {
+  position: relative;
+}
+/* General Body Styling */
+body {
+  font-family: 'Arial', sans-serif; /* Font family for readability */
+  background-color: #ececea; /* Light background color for the page */
+  color: #333; /* Dark text color for contrast */
+  margin: 30pv; /* Remove default margin */
+  padding: 30pv; /* Remove default padding */
+  line-height: 1.6; /* Line height for readability */
+  display: flex;
+  flex-direction: column; /* Flexbox layout to accommodate different sections */
+  min-height: 100vh; /* Ensure the body covers the full viewport height */
+}
+
+/* Container styling */
+.container {
+  width: 90%; /* Container width */
+  max-width: 1200px; /* Maximum container width */
+  margin: 200 px; /* Center align container horizontally */
+  padding: 3rem; /* Padding around content */
+
+}
+
+
+.text-content {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  z-index: 4; /* Ensure text is above all the images */
+  max-width: 600px; /* Adjust the width as needed */
+}
+
+h1 {
+  margin: 0;
+  padding: 20px;
+  color: rgb(41, 40, 39); /* Text color */
+  font-size: 66px; /* Adjust the size as needed */
+  line-height: 1.0; /* Adds spacing between lines */
+}
+
+p {
+  margin: 10px 0 20px 0; /* Added bottom margin to create space for the buttons */
+  padding: 20px;
+  color: rgb(124, 103, 103); /* Text color */
+  font-size: 28px; /* Adjust the size as needed */
+  line-height: 1.5; /* Adds spacing between lines */
+}
+
+/* Style for buttons */
+button {
+  font-size: 28px;
+  padding: 10px 20px;
+  margin-right: 10px; /* Space between buttons */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:first-of-type {
+  background-color: #4a7a4c; /* Green background */
+  color: white; /* White text */
+}
+
+button:first-of-type:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+button:last-of-type {
+  background-color: white; /* White background */
+  color: #4a7a4c; /* Green text */
+  border: 2px solid #4a7a4c; /* Green border */
+}
+
+button:last-of-type:hover {
+  background-color: #f1f1f1; /* Light gray on hover */
+}
+
+/* Add down arrow using ::after pseudo-element */
+button:last-of-type::after {
+  content: " \2193"; /* Unicode for down arrow */
+  margin-left: 8px;
+}
+
+.black-box {
+  position: relative;
+  z-index: 1;
+  height: 400px;
+  margin: 40px;
+  overflow: hidden;
+  left: 600px;
+}
+
+.gray-box {
+  position: absolute;
+  z-index: 3;
+  height: 280px;
+  width: 70%;
+  right: 200px;
+  top: 380px;
+  overflow: hidden;
+}
+
+.green-box {
+  position: absolute;
+  z-index: 2;
+  width: 80%;
+  left: 280px;
+  top: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+
+img {
+  height: 100%;
+  width: auto;
+  float: right;
+  object-fit: cover;
+  box-shadow: none; /* No shadow on images */
+}
+
+/* Styling for circular images and text side by side */
+.image-circle-container {
+  display: flex;
+  align-items: center; /* Center align vertically */
+  gap: -35px; /* Reduce gap between images */
+  margin-top: 200px; /* Space above the circular images (adjust as needed) */
+  padding: 50px;
+}
+
+.image-circle-container img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Circular shape */
+  object-fit: cover;
+  box-shadow: none;
+  background-color: #13b11b;
+}
+
+/* Text container */
+.image-text-container {
+  display: flex;
+  align-items: center; /* Center align vertically */
+  margin-left: 80px; /* Space between images and text */
+}
+
+.image-text-container p {
+  font-size: 30px; /* Adjust font size as needed */
+  color: #684a4a; /* Adjust text color as needed */
+  margin: 0;
+}
+
+/* Logo container styles */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px; /* Adjust the margin between the heading and logos */
+  gap: 20px; /* Adjust the space between logos */
+}
+
+.logo-container img {
+  width: 200px; /* Adjust the logo size as needed */
+  height: auto;
+  object-fit: contain;
+}
+
+/* Heading above logo */
+.logo-heading {
+  text-align: center;
+  font-size: 26px; /* Adjust font size as needed */
+  color: #333; /* Adjust text color as needed */
+  margin-top: 80px; /* Add space above the heading */
+}
+
+/* Flexbox for steps: Align text and image side by side */
+.step-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.step-text-box {
+  max-width: 600px;
+}
+/* Container for each step */
+.step-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  padding: 40px;
+}
+
+/* Image container */
+.step-image-box {
+  flex: 1;
+  text-align: center; /* Center align the image horizontally */
+}
+
+/* Step images */
+.step-img {
+  width: 300px; /* Set a fixed width */
+  height: 500px; /* Set a fixed height */
+  object-fit: cover; /* Maintain aspect ratio and cover the dimensions */
+  display: block;
+  margin: 0 auto; /* Center image if it's smaller than its container */
+}
+
+.step-number {
+  font-size: 8cqmax;
+  color: #dddddd; /* Matching the button color */
+  margin: 0;
+}
+
+.heading-tertiary {
+  font-size: 36px;
+  color: #333;
+  margin: 10px 0 20px;
+}
+
+.step-description {
+  font-size: 20px;
+  color: #383232;
+  line-height: 1.5;
+}
+
+.step-image-box {
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.step-image-box img {
+  width: 400px;
+  object-fit: cover;
+  border-radius: 35px;
+}
+/* Container for testimonials */
+.Testimonials-container {
+  text-align: center; /* Center-align text inside the container */
+  margin: 0rem auto; /* Optional: adds vertical margin and centers container horizontally */
+  padding: 1rem; /* Optional: adds padding inside the container */
+}
+/* Central text section */
+.container-central-text {
+  text-align: center;
+  margin-top: 60px; /* Adjust the margin as needed */
+}
+
+.subhead {
+  font-size: 28px;
+  color: #253325; /* Match the green color */
+}/* Flexbox layout for positioning meals on the left and diets on the right */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Adjust spacing between the two sections */
+  }
+  
+  /* Meals section */
+  .meals-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+
+.meal:hover {
+    transform: translateY(-10px); /* Move upward by 10px */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add stronger shadow effect */
+  }
+  
+  .meal {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  
+  .meal-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .meal-content {
+    padding: 20px;
+  }
+  
+  .meal-tags {
+    margin-bottom: 10px;
+  }
+  
+  .tag {
+    display: inline-block;
+    margin-right: 5px;
+    background-color: #e0f7fa;
+    color: #00796b;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .meal-attributes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .meal-attribute {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .icon-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  /* Diets section */
+  .diets {
+    flex: 1;
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+  }
+  
+  .heading-tertiary {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .list-item .icon-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  /* Center the link container */
+.container.all-recipies {
+    display: flex;
+    justify-content: center;  /* Horizontally center */
+    align-items: center;  /* Vertically center */
+    height: 20vh; /* Full viewport height (optional, can be removed if not needed) */
+  }
+/* Link styles */
+.link {
+  color: #ff6347; /* Link color */
+  text-decoration: underline;
+  font-size: 2rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;  /* Vertically center */
+  gap: 0.5rem; /* Space between text and arrow */
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.link:hover {
+  color: #ff4500;
+}
+
+/* Arrow icon */
+.arrow-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+/* Hover arrow animation */
+.link:hover .arrow-icon {
+  transform: translateX(5px); /* Move arrow to the right on hover */
+}
+.testimonials-gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns: testimonials on the left, gallery on the right */
+  align-items: start;
+  gap: 6rem;
+  margin: 2rem 0;
+  padding: 20px;
+  background-color: #33c98a;
+}
+
+.Testimonials-container {
+  display: grid; /* Changed from flex to grid */
+  gap: 10rem;
+  padding: 20px;
+}
+
+.testimonials {
+  display: grid; /* Use grid layout for testimonials */
+  grid-template-columns: 1fr 1fr; /* Two columns for testimonials */
+  gap: 2rem; /* Space between testimonials */
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for gallery items */
+  grid-gap: 0.5rem;
+}
+
+.gallery-item {
+  position: relative; /* Needed for z-index effect */
+  overflow: hidden; /* Hide overflow of the scaled image */
+  transition: transform 0.3s ease, z-index 0.3s ease; /* Smooth transition */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px; /* Equal height for all images */
+  object-fit: cover; /* Ensures images fill the area without distortion */
+  border-radius: 6px;
+  transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+.gallery-item:hover {
+  z-index: 10; /* Bring the hovered item to the front */
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); /* Slightly enlarge the image */
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+/* Styling for the testimonial names */
+.testimonial-name {
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: bold; /* Make the name bold */
+  color: #5a4497; /* Match with the subheading color or design theme */
+  margin-top: 10px; /* Space above the name */
+  margin-bottom: 20px; /* Space below the name */
+  text-align: right; /* Align text to the right */
+}
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-text {
+  margin-top: 2rem;
+  font-style: Time New Roman;
+  font: 1em sans-serif;
+}
+
+.heading-secondary, .subheading {
+  text-align: left;
+}
+
+@media screen and (max-width: 700px) {
+  .testimonials-gallery-container {
+    grid-template-columns: 1fr; /* Stack on smaller screens */
+    background-color: #13b11b;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr; /* Stack testimonials in a single column on smaller screens */
+  }
+
+  .gallery {
+    grid-template-columns: 1fr; /* Stack gallery items in a single column on smaller screens */
+  }
+}
+/* Overall section styling */
+.section-pricing {
+  padding: 60px 0; /* Add padding around the section */
+  background-color: #f7f7f7; /* Light background color */
+}
+
+/* Container styling for section headings */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* Styling for subheading and heading */
+.subheading {
+  font-size: 24px; /* Reduced font size */
+  color: #5a4497; /* Keep the color */
+  margin-bottom: 20px; /* Reduced bottom margin */
+  padding: 60px; /* Reduced padding */
+}
+
+.heading-secondary {
+  font-size: 40px; /* Reduced font size */
+  color: #000000; /* Keep the color */
+  margin-bottom: 20px; /* Reduced bottom margin */
+  padding: 60px; /* Reduced padding */
+}
+
+/* Grid layout for pricing plans */
+.grid {
+  flex-wrap: wrap;
+  gap: 20px;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Two-column layout for pricing plans */
+.grid--2-cols {
+  justify-content: space-between;
+ }
+
+
+/* Pricing plan card styling */
+.Pricing-plan {
+  background-color: #e7dede; /* White background for the card */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 30.8px;
+  text-align: center;
+  flex: 1;
+  width: 50%;
+  
+}
+
+.Pricing-plan--starter {
+  border: 2px solid #122213; /* Green border for starter plan */
+}
+
+.Pricing-plan--complete {
+  border: 2px solid #000000; /* Black border for complete plan */
+}
+
+/* Plan header styling */
+.plan-header {
+  margin-bottom: 20px;
+}
+
+.plan-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.plan-price {
+  font-size: 49px;
+  color: #000000;
+}
+
+.plan-text {
+  font-size: 26px;
+  color: #777777; /* Gray color for the text */
+}
+
+/* List styling inside the plan */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.list-icon {
+  margin-right: 10px;
+  color: #53b356; /* Green color for the icons */
+}
+
+.plan-sign-up {
+  margin-top: 20px;
+}
+
+.btn--full {
+  background-color: #53b356; /* Green button */
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+.plan-details {
+  display: inline-block;  /* Allows the container to only be as wide as the content */
+  white-space: nowrap;    /* Prevents line breaks */
+  text-align: left;       /* Aligns the text to the left */
+  padding: 20px;          /* Adds padding for spacing */
+  font-size: 1.5rem;        /* Adjust font size if needed */
+}
+/* Ensure container elements are displayed as grid containers */
+.container {
+  width: 100%;
+  padding: 0 20px; /* Adjust padding as needed */
+}
+
+.grid {
+  display: grid;
+  gap: 10px; /* Space between grid items */
+  top: auto;
+
+}
+
+.grid--4-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem 0.5rem; /* 1rem for row gaps, 0.5rem for column gaps */
+  top: auto;
+  
+}
+
+/* Feature styling */
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5px; /* Further reduced padding */
+  margin: 0; /* Remove any margin between feature boxes */
+  background-color: #d9ec92;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  max-width: 200px; /* Adjusted max width to fit all boxes */
+}
+
+/* Icon image styling */
+.feature-icon-img {
+  width: 40px; /* Reduced icon size */
+  height: auto;
+  margin-bottom: 5px; /* Reduced space below the icon */
+}
+
+/* Feature title styling */
+.feature-title {
+  font-size: 1.2em; /* Further reduced font size */
+  margin: 0 0 5px 0; /* Reduce margins around the title */
+  color: #333333;
+}
+
+/* Feature text styling */
+.feature-text {
+  font-size: 1em;
+  color: #555555;
+  margin: 0; /* Remove any extra margin */
+}
+
+
+/* Optional: Add styling for the plan details */
+.plan-details {
+  text-align: center;
+  margin-bottom: 20px; /* Space below the text */
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.list-icon {
+  width: 20px; /* Adjust icon size */
+  height: 20px; /* Adjust icon size */
+   margin-right: 10px; /* Space between icon and text */
+}
+ /* General section styling */
+ .section-cta {
+  padding: 50px 0;
+  background-color: #b3b2b0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.cta-text-box {
+  flex: 1;
+  max-width: 800px;
+}
+
+.heading-secondary {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.cta-text {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* Form styling */
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+.cta-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input, select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus, select:focus {
+  border-color: #555;
+  outline: none;
+}
+
+.btn--form {
+  padding: 10px ;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #ad4836;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn--form:hover {
+  background-color: #ff4500;
+}
+
+/* Image box styling */
+.cta-img-box {
+  flex: 1;
+  background-image: url('assets\images\women eating.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  width: 150%;
+  height: 800px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .cta {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .cta-img-box {
+    height: 500px;
+  }
+}
