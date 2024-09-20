@@ -790,3 +790,179 @@ input:focus, select:focus {
     height: 500px;
   }
 }
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+  margin: 20px;
+  padding: 40px;
+  background-color: #e9e9e9;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+/* Footer Logo Styling */
+.footer-logo {
+  display: inline-block;  /* Ensures the logo takes only the space it needs */
+  margin-bottom: 4rem;  /* Space below the logo */
+  text-decoration: none;  /* Remove default link underline */
+}
+
+.footer-logo img {
+  width: 150px;  /* Set a standard size for the logo */
+  height: auto;  /* Keep the aspect ratio */
+  transition: transform 0.3s ease-in-out;  /* Add a smooth transition effect */
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-ion img {
+  width: 30px;  /* Icon image size */
+  height: 30px;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.0rem;
+  line-height: 1.2;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}
+  
+@media (max-width: 34em) {
+  .grid {
+      row-gap: 4.8rem;
+  }
+}
+}
+@media (max-width: 44em) {
+    .logo-col, .address-col {
+        grid-column: span 3;
+    }
+}
+host .ionicon {
+  stroke: currentcolor;
+}
+@media (max-width: 59em) {
+  .main-nav-link:link, .main-nav-link:visited {
+      font-size: 3rem;
+  }
+}
+
+
+  /* Header Styling */
+.header {
+  display: flex;  /* Flexbox layout for the header */
+  justify-content: space-between;  /* Space between logo and nav */
+  align-items: center;  /* Vertically center items */
+  background-color: #ece9e9;  /* Dark background for the header */
+  padding: 1rem 2rem;  /* Padding for spacing */
+}
+
+.logo {
+  width: 150px;  /* Set logo width */
+  height: auto;  /* Maintain aspect ratio */
+}
+
+/* Main Navigation Styling */
+.main-nav {
+  flex-grow: 1;  /* Allow nav to take available space */
+}
+
+.main-nav-list {
+  list-style: none;  /* Remove default list styles */
+  display: flex;  /* Horizontal layout for nav items */
+  justify-content: flex-end;  /* Align items to the right */
+  padding: 0;  /* Remove padding */
+  margin: 0;  /* Remove margin */
+}
+
+.main-nav-list li {
+  margin-left: 2rem;  /* Space between nav items */
+}
+
+.main-nav-list a {
+  color: #ffcc00;  /* Link color */
+  text-decoration: none;  /* Remove underline */
+  font-size: 1.6rem;  /* Font size for links */
+  transition: color 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+.main-nav-list a:hover {
+  color: #fff;  /* Change color on hover */
+}
+
+/* Mobile Navigation Button */
+.btn-mobile-nav {
+  display: none;  /* Hidden by default */
+  background: none;  /* No background */
+  border: none;  /* No border */
+  cursor: pointer;  /* Pointer cursor on hover */
+  font-size: 2rem;  /* Increase icon size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;  /* Hide main nav by default on mobile */
+  }
+
+  .btn-mobile-nav {
+    display: block;  /* Show mobile nav button */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 120px;  /* Smaller logo for mobile */
+  }
+
+  .main-nav-list a {
+    font-size: 1.4rem;  /* Smaller font size for mobile */
+  }
+}
