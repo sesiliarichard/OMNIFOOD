@@ -1,9 +1,15 @@
 .container {
   position: relative;
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
 }
 /* General Body Styling */
 body {
-  font-family: 'Arial', sans-serif; /* Font family for readability */
+   font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  overflow-x: hidden;
   background-color: #ececea; /* Light background color for the page */
   color: #333; /* Dark text color for contrast */
   margin: 30pv; /* Remove default margin */
@@ -22,7 +28,11 @@ body {
   padding: 3rem; /* Padding around content */
 
 }
-
+.background-container {
+  background-color: #d5dfc0; /* Replace with your desired color */
+  padding: 20px; /* Optional: Adds some spacing inside the container */
+  min-height: 100vh; /* Ensures the container takes up the full viewport height */
+}
 
 .text-content {
   position: absolute;
@@ -202,11 +212,12 @@ img {
 
 /* Step images */
 .step-img {
-  width: 300px; /* Set a fixed width */
   height: 500px; /* Set a fixed height */
   object-fit: cover; /* Maintain aspect ratio and cover the dimensions */
   display: block;
   margin: 0 auto; /* Center image if it's smaller than its container */
+  width: 35%;
+  z-index: 10;
 }
 
 .step-number {
@@ -228,14 +239,26 @@ img {
 }
 
 .step-image-box {
-  flex-shrink: 0;
-  margin-left: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .step-image-box img {
   width: 400px;
   object-fit: cover;
   border-radius: 35px;
+}
+@media (max-width: 34em) {
+  .step-img-box:nth-child(2) {
+      grid-row: 1;
+  }
+}
+@media (max-width: 34em) {
+.step-img-box {
+    transform: translateY(2.4rem);
+}
 }
 /* Container for testimonials */
 .Testimonials-container {
@@ -268,11 +291,15 @@ img {
   }
 
 
+  .meal {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Set transition for transform and box-shadow */
+}
+
 .meal:hover {
-    transform: translateY(-10px); /* Move upward by 10px */
+    transform: translateY(-20px); /* Move upward by 20px */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add stronger shadow effect */
-  }
-  
+}
+
   .meal {
     background-color: #fff;
     border-radius: 10px;
@@ -689,280 +716,328 @@ img {
   height: 20px; /* Adjust icon size */
    margin-right: 10px; /* Space between icon and text */
 }
- /* General section styling */
- .section-cta {
-  padding: 50px 0;
-  background-color: #b3b2b0;
+/* General section styling */
+.section-cta {
+padding: 50px 60px;
+background-color: #b3b2b0;
+border-radius: 35px;
+margin: 50px;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 30px;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 30px;
 }
 
 .cta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 40px;
 }
 
 .cta-text-box {
-  flex: 1;
-  max-width: 800px;
+flex: 1;
+max-width: 800px;
 }
 
 .heading-secondary {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #333;
+font-size: 2rem;
+margin-bottom: 10px;
+color: #333;
 }
 
 .cta-text {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #666;
+font-size: 1.2rem;
+margin-bottom: 10px;
+color: #666;
 }
 
 /* Form styling */
 .cta-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 3.2rem;
-  row-gap: 2.4rem;
+display: grid;
+grid-template-columns: 1fr 1fr;
+column-gap: 3.2rem;
+row-gap: 2.4rem;
 }
 .cta-form div {
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 }
 
 label {
-  font-size: 1rem;
-  margin-bottom: 5px;
-  color: #333;
+font-size: 1rem;
+margin-bottom: 5px;
+color: #333;
 }
 
 input, select {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+padding: 10px;
+font-size: 1rem;
+border: 1px solid #ccc;
+border-radius: 5px;
 }
 
 input:focus, select:focus {
-  border-color: #555;
-  outline: none;
+border-color: #555;
+outline: none;
 }
 
 .btn--form {
-  padding: 10px ;
-  font-size: 1.2rem;
-  color: white;
-  background-color: #ad4836;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+padding: 10px ;
+font-size: 1.2rem;
+color: white;
+background-color: #ad4836;
+border: none;
+border-radius: 8px;
+cursor: pointer;
 }
 
 .btn--form:hover {
-  background-color: #ff4500;
+background-color: #ff4500;
 }
 
 /* Image box styling */
 .cta-img-box {
-  flex: 1;
-  background-image: url('assets\images\women eating.jpg'); /* Replace with your image */
-  background-size: cover;
-  background-position: center;
-  width: 150%;
-  height: 800px;
-  border-radius: 10px;
+flex: 1;
+background-image: url('assets\images\women eating.jpg'); /* Replace with your image */
+background-size: cover;
+background-position: center;
+width: 150%;
+height: 800px;
+border-radius: 10px;
+}
+.btn .btn--form{
+color: #000000;
+font: 16px Rubik,sans-serif;
+background-color: #000000;
+margin: 9.6px 0px 0px;
+padding: 9.6px;
 }
 
 @media (max-width: 768px) {
-  .cta {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .cta-img-box {
-    height: 500px;
-  }
+.cta {
+  flex-direction: column;
+  text-align: center;
 }
 
+.cta-img-box {
+  height: 500px;
+}
+}
 .footer {
-  padding: 12.8rem 0;
-  border-top: 1px solid #eee;
-  margin: 20px;
-  padding: 40px;
-  background-color: #e9e9e9;
+padding: 12.8rem 0;
+border-top: 1px solid #eee;
+margin: 10px;
+background-color: #e9e9e9;
+display: block;
+unicode-bidi: isolate;
+
 }
 
 .grid--footer {
-  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+display: grid;
+grid-template-columns: repeat(5, 1fr);  /* 5 equal-width columns */
+gap: 1.6rem;  /* Gap between grid items */
 }
 
 .logo-col {
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 }
-/* Footer Logo Styling */
+
 .footer-logo {
-  display: inline-block;  /* Ensures the logo takes only the space it needs */
-  margin-bottom: 4rem;  /* Space below the logo */
-  text-decoration: none;  /* Remove default link underline */
+display: inline-block;
+margin-bottom: 2rem;
+text-decoration: none;
 }
 
 .footer-logo img {
-  width: 150px;  /* Set a standard size for the logo */
-  height: auto;  /* Keep the aspect ratio */
-  transition: transform 0.3s ease-in-out;  /* Add a smooth transition effect */
+width: 150px;
+height: auto;
+transition: transform 0.3s ease-in-out;
 }
 
 .social-links {
-  list-style: none;
-  display: flex;
-  gap: 2.4rem;
+list-style: none;
+display: flex;
+gap: 1.2rem;
 }
 
 .social-ion img {
-  width: 30px;  /* Icon image size */
-  height: 30px;
+width: 30px;
+height: 30px;
 }
 
 .copyright {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  color: #767676;
-  margin-top: auto;
+font-size: 1.4rem;
+line-height: 1.6;
+color: #767676;
+margin-top: 1rem;
 }
 
 .footer-heading {
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-bottom: 4rem;
+font-size: 1.8rem;
+font-weight: 500;
+margin-bottom: 2rem;
+margin: 0px 0px 32px;
 }
 
 .contacts {
-  font-style: normal;
-  font-size: 1.0rem;
-  line-height: 1.2;
+font-style: normal;
+font-size: 0.5rem;
+line-height: 1.4;
 }
 
 .address {
-  margin-bottom: 2.4rem;
+margin-bottom: 1.2rem;
+font-size: 1.4rem;
+line-height: 1.6;
+color: #767676;
+margin-top: 2rem;
 }
 
 .footer-nav {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
+list-style: none;
+display: flex;
+flex-direction: column;
+gap: 1.4rem;
+font-size: 2.4rem;
+line-height: 1.6;
+color: #767676;
+margin-top: 2rem;
+font: 8px Rubik,sans-serif;
 }
 
 .footer-link:link,
 .footer-link:visited {
-  text-decoration: none;
-  font-size: 1.6rem;
-  color: #767676;
-  transition: all 0.3s;
+text-decoration: none;
+font-size: 1.6rem;
+color: #767676;
+transition: all 0.3s;
 }
 
 .footer-link:hover,
 .footer-link:active {
-  color: #555;
+color: #555;
 }
-  
+
 @media (max-width: 34em) {
-  .grid {
-      row-gap: 4.8rem;
-  }
+.grid {
+  row-gap: 4.8rem;
+}
+}
+
+@media (max-width: 44em) {
+.logo-col, .address-col {
+  grid-column: span 3;
 }
 }
 @media (max-width: 44em) {
-    .logo-col, .address-col {
-        grid-column: span 3;
-    }
+.nav-col {
+    grid-row: 1;
+    /* grid-column: span 2; */
+    margin-bottom: 3.2rem;
 }
-host .ionicon {
-  stroke: currentcolor;
-}
-@media (max-width: 59em) {
-  .main-nav-link:link, .main-nav-link:visited {
-      font-size: 3rem;
-  }
 }
 
-
-  /* Header Styling */
+/* Header Styling */
 .header {
-  display: flex;  /* Flexbox layout for the header */
-  justify-content: space-between;  /* Space between logo and nav */
-  align-items: center;  /* Vertically center items */
-  background-color: #ece9e9;  /* Dark background for the header */
-  padding: 1rem 2rem;  /* Padding for spacing */
+display: flex;  /* Flexbox layout for the header */
+justify-content: space-between;  /* Space between logo and nav */
+align-items: center;  /* Vertically center items */
+background-color: #ece9e9;  /* Dark background for the header */
+padding: 1rem 2rem;  /* Padding for spacing */
+position:fixed;
+z-index: 1000;
+width: 95%;
 }
 
 .logo {
-  width: 150px;  /* Set logo width */
-  height: auto;  /* Maintain aspect ratio */
+width: 150px;  /* Set logo width */
+height: auto;  /* Maintain aspect ratio */
 }
 
 /* Main Navigation Styling */
 .main-nav {
-  flex-grow: 1;  /* Allow nav to take available space */
+flex-grow: 1;  /* Allow nav to take available space */
 }
 
 .main-nav-list {
-  list-style: none;  /* Remove default list styles */
-  display: flex;  /* Horizontal layout for nav items */
-  justify-content: flex-end;  /* Align items to the right */
-  padding: 0;  /* Remove padding */
-  margin: 0;  /* Remove margin */
+list-style: none;  /* Remove default list styles */
+display: flex;  /* Horizontal layout for nav items */
+justify-content: flex-end;  /* Align items to the right */
+padding: 0;  /* Remove padding */
+margin: 0;  /* Remove margin */
 }
 
 .main-nav-list li {
-  margin-left: 2rem;  /* Space between nav items */
+margin-left: 2rem;  /* Space between nav items */
 }
 
 .main-nav-list a {
-  color: #ffcc00;  /* Link color */
-  text-decoration: none;  /* Remove underline */
-  font-size: 1.6rem;  /* Font size for links */
-  transition: color 0.3s ease;  /* Smooth transition for hover effect */
+color: #ffcc00;  /* Link color */
+text-decoration: none;  /* Remove underline */
+font-size: 1.6rem;  /* Font size for links */
+transition: color 0.3s ease;  /* Smooth transition for hover effect */
 }
 
 .main-nav-list a:hover {
-  color: #fff;  /* Change color on hover */
+color: #fff;  /* Change color on hover */
 }
 
 /* Mobile Navigation Button */
 .btn-mobile-nav {
-  display: none;  /* Hidden by default */
-  background: none;  /* No background */
-  border: none;  /* No border */
-  cursor: pointer;  /* Pointer cursor on hover */
-  font-size: 2rem;  /* Increase icon size */
+display: none;  /* Hidden by default */
+background: none;  /* No background */
+border: none;  /* No border */
+cursor: pointer;  /* Pointer cursor on hover */
+font-size: 2rem;  /* Increase icon size */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .main-nav {
-    display: none;  /* Hide main nav by default on mobile */
-  }
+.main-nav {
+  display: none;  /* Hide main nav by default on mobile */
+}
 
-  .btn-mobile-nav {
-    display: block;  /* Show mobile nav button */
-  }
+.btn-mobile-nav {
+  display: block;  /* Show mobile nav button */
+}
 }
 
 @media (max-width: 480px) {
-  .logo {
-    width: 120px;  /* Smaller logo for mobile */
-  }
-
-  .main-nav-list a {
-    font-size: 1.4rem;  /* Smaller font size for mobile */
-  }
+.logo {
+  width: 120px;  /* Smaller logo for mobile */
 }
+
+.main-nav-list a {
+  font-size: 1.4rem;  /* Smaller font size for mobile */
+}
+}
+.main-nav-link.nav-cta:link, .main-nav-link.nav-cta:visited {
+padding: 1.2rem 2.4rem;
+border-radius: 9px;
+color: #fff;
+background-color: #e67e22;
+text-decoration: underline;
+}
+/* Special styling for "Try for Free" button */
+.btn--cta {
+background-color: #ff6f61; /* Different background color */
+color: white;
+padding: 10px 20px;
+border-radius: 10px; /* Rounded corners */
+font-weight: bold;
+transition: all 0.3s ease;
+
+}
+
+/* Hover effect for the button */
+.btn--cta:hover {
+background-color: #ff4a36; /* Darker hover color */
+color: #fff;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Adding a shadow on hover */
+}
+
