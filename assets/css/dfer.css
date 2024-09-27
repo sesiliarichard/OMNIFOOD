@@ -12,10 +12,10 @@ body {
     overflow-x: hidden;
     background-color: #ececea; /* Light background color for the page */
     color: #333; /* Dark text color for contrast */
-    margin: 30pv; /* Remove default margin */
+    margin: 40pv; /* Remove default margin */
     padding: 30pv; /* Remove default padding */
-    line-height: 1.6; /* Line height for readability */
-    display: flex;
+    line-height: 1; /* Line height for readability */
+    display: block;
     flex-direction: column; /* Flexbox layout to accommodate different sections */
     min-height: 100vh; /* Ensure the body covers the full viewport height */
   }
@@ -65,14 +65,25 @@ body {
   /* Style for buttons */
   button {
     font-size: 28px;
-    padding: 10px 20px;
     margin-right: 10px; /* Space between buttons */
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-  }
+    background-color: #4CAF50; /* Customize button background */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
   
+  }
+  button a {
+    text-decoration: none;
+    color: inherit; /* This makes sure the link inherits the button's color */
+  }
+
+  button:hover {
+    background-color: #45a049; /* Darker background on hover */
+  }
   button:first-of-type {
     background-color: #4a7a4c; /* Green background */
     color: white; /* White text */
@@ -140,8 +151,9 @@ body {
     display: flex;
     align-items: center; /* Center align vertically */
     gap: -45px; /* Reduce gap between images */
-    margin-top: 200px; /* Space above the circular images (adjust as needed) */
+    margin-top: 150px; /* Space above the circular images (adjust as needed) */
     padding: 50px;
+    align-items: center;
   }
   
   .image-circle-container img {
@@ -171,8 +183,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px; /* Adjust the margin between the heading and logos */
-    gap: 20px; /* Adjust the space between logos */
+    margin: 40px; /* Adjust the margin between the heading and logos */
+    gap: 15px; /* Adjust the space between logos */
   }
   
   .logo-container img {
@@ -435,7 +447,7 @@ body {
     gap: 6rem;
     margin: 2rem 0;
     padding: 20px;
-    background-color: #33c98a;
+    background-color: #33c9c9;
   }
   
   .Testimonials-container {
@@ -454,6 +466,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns for gallery items */
     grid-gap: 0.5rem;
+    padding: 0.6rem;
     
   }
   
@@ -478,7 +491,17 @@ body {
   .gallery-item:hover img {
     transform: scale(1.1); /* Slightly enlarge the image */
   }
-  
+  @media (max-width: 59em) {
+    .gallery {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (max-width: 84em) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
   .testimonial {
     display: flex;
     flex-direction: column;
@@ -543,8 +566,8 @@ body {
   .subheading {
     font-size: 24px; /* Reduced font size */
     color: #5a4497; /* Keep the color */
-    margin-bottom: 20px; /* Reduced bottom margin */
-    padding: 60px; /* Reduced padding */
+    margin-bottom: 40px; /* Reduced bottom margin */
+    padding: 40px; /* Reduced padding */
   }
   
   .heading-secondary {
@@ -563,7 +586,18 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
-  
+  @media (max-width: 75em) {
+    .grid {
+        column-gap: 4.8rem;
+        row-gap: 6.4rem;
+    }
+}
+.margin-bottom-md {
+    margin-bottom: 4.8rem !important;
+}
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
   /* Two-column layout for pricing plans */
   .grid--2-cols {
     justify-content: space-between;
@@ -655,8 +689,10 @@ body {
   
   .grid {
     display: grid;
-    gap: 10px; /* Space between grid items */
     top: auto;
+    column-gap: 6.4rem;
+    row-gap: 6.6rem;
+    margin: 20px;
   
   }
   
